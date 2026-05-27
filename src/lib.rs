@@ -88,7 +88,7 @@ pub fn write_packet(packet: &EvidencePacket, output_dir: &Path) -> Result<()> {
 
 pub fn render_markdown(packet: &EvidencePacket) -> String {
     let mut markdown = String::new();
-    markdown.push_str("# Evidence Packet\n\n");
+    markdown.push_str("# Artifact Manifest\n\n");
     markdown.push_str("## Boundary Note\n\n");
     markdown.push_str(&packet.boundary_note);
     markdown.push_str("\n\n");

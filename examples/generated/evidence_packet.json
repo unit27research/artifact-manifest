@@ -1,7 +1,7 @@
 {
   "packet_version": "0.1",
-  "created_unix_seconds": 1779921605,
-  "declared_claim": "The local CLI generated an evidence packet from synthetic artifacts.",
+  "created_unix_seconds": 1779922558,
+  "declared_claim": "The local CLI generated an artifact manifest from synthetic artifacts.",
   "supported_scope": "one local demo using synthetic files",
   "limitations": [
     "does not establish production readiness",

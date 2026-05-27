@@ -1,4 +1,4 @@
-# Evidence Packet
+# Artifact Manifest
 
 ## Boundary Note
 
@@ -6,7 +6,7 @@ This packet records supplied artifacts and declared boundaries. It does not prov
 
 ## Declared Claim
 
-The local CLI generated an evidence packet from synthetic artifacts.
+The local CLI generated an artifact manifest from synthetic artifacts.
 
 ## Supported Scope
 

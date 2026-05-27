@@ -1,4 +1,4 @@
-use evidence_packet::{CreatePacketOptions, create_packet};
+use artifact_manifest::{CreatePacketOptions, create_packet};
 use std::fs;
 use tempfile::tempdir;
 

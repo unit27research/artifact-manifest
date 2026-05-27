@@ -1,14 +1,14 @@
-# Evidence Packet
+# Artifact Manifest
 
-[![CI](https://github.com/unit27research/evidence-packet/actions/workflows/ci.yml/badge.svg)](https://github.com/unit27research/evidence-packet/actions/workflows/ci.yml)
+[![CI](https://github.com/unit27research/artifact-manifest/actions/workflows/ci.yml/badge.svg)](https://github.com/unit27research/artifact-manifest/actions/workflows/ci.yml)
 
 Artifact does not equal proof.
 
-Evidence Packet is a small local Rust instrument for packaging evidence artifacts with hashes, declared scope, limitations, and a clear boundary note.
+Artifact Manifest is a small local Rust instrument for packaging artifacts with hashes, declared scope, limitations, and a clear boundary note.
 
 It records what was supplied. It does not prove that the claim is true.
 
-The category is evidence-packet review: artifact does not equal proof, boundary before scale, and review before release.
+The category is artifact-manifest review: artifact does not equal proof, boundary before scale, and review before release.
 
 ## Release Status
 
@@ -36,9 +36,9 @@ The packet keeps the artifact record and the evidence boundary in the same revie
 - SHA-256 hashes
 - risk flags for obvious private, scratch, cache, or generated-local files
 
-## What Evidence Packet Does
+## What Artifact Manifest Does
 
-Evidence Packet reads a local artifact directory and writes a bounded packet:
+Artifact Manifest reads a local artifact directory and writes a bounded packet:
 
 - `evidence_packet.json`
 - `EVIDENCE_PACKET.md`
@@ -59,7 +59,7 @@ Use `--allow-risky` only for synthetic or intentionally reviewed material. When 
 
 ## What It Does Not Do
 
-Evidence Packet is not a verifier, fact-checker, fraud detector, certification system, compliance system, legal reviewer, medical safety tool, or truth oracle.
+Artifact Manifest is not a verifier, fact-checker, fraud detector, certification system, compliance system, legal reviewer, medical safety tool, or truth oracle.
 
 It does not inspect external sources, validate screenshots, audit code, certify evidence, or decide what should be published.
 
@@ -67,12 +67,12 @@ It is a local artifact-packaging aid. The output is a review surface for human j
 
 ## Where It Fits
 
-Evidence Packet sits beside the Proofwashing Suite as an adjacent evidence-boundary utility.
+Artifact Manifest sits beside the Proofwashing Suite as an adjacent evidence-boundary utility.
 
 - Proofwashing Suite asks: "Which claim-review instrument should be used?"
 - Humility Engine asks: "Does this claim outrun the evidence?"
 - Evidence Floor asks: "Does this claim meet the minimum evidence required for this claim class?"
-- Evidence Packet asks: "What artifact record is actually being supplied, and what boundary is declared around it?"
+- Artifact Manifest asks: "What artifact record is actually being supplied, and what boundary is declared around it?"
 
 ## Who It Is For
 
@@ -87,7 +87,7 @@ Build and run the synthetic example:
 
 ```bash
 cargo run -- create examples/sample_artifacts \
-  --claim "The local CLI generated an evidence packet from synthetic artifacts." \
+  --claim "The local CLI generated an artifact manifest from synthetic artifacts." \
   --scope "one local demo using synthetic files" \
   --limitations "does not establish production readiness" \
   --limitations "does not verify the truth of the claim" \
@@ -125,7 +125,7 @@ cargo fmt -- --check
 cargo test
 cargo clippy -- -D warnings
 cargo run -- create examples/sample_artifacts \
-  --claim "The local CLI generated an evidence packet from synthetic artifacts." \
+  --claim "The local CLI generated an artifact manifest from synthetic artifacts." \
   --scope "one local demo using synthetic files" \
   --limitations "does not establish production readiness" \
   --limitations "does not verify the truth of the claim" \

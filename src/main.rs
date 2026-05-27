@@ -1,10 +1,10 @@
 use anyhow::Result;
+use artifact_manifest::{CreatePacketOptions, create_packet, write_packet};
 use clap::{Parser, Subcommand};
-use evidence_packet::{CreatePacketOptions, create_packet, write_packet};
 use std::path::PathBuf;
 
 #[derive(Debug, Parser)]
-#[command(name = "evidence-packet")]
+#[command(name = "artifact-manifest")]
 #[command(about = "Package local artifacts with claim scope, limitations, and hashes.")]
 struct Cli {
     #[command(subcommand)]
@@ -53,7 +53,7 @@ fn main() -> Result<()> {
             })?;
             write_packet(&packet, &output)?;
             println!(
-                "Evidence packet written to {}",
+                "Artifact manifest written to {}",
                 output.canonicalize().unwrap_or(output).display()
             );
         }

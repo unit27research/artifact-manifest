@@ -17,7 +17,7 @@ fn create_writes_json_and_markdown_packet_for_safe_artifacts() {
     )
     .unwrap();
 
-    Command::cargo_bin("evidence-packet")
+    Command::cargo_bin("artifact-manifest")
         .unwrap()
         .args([
             "create",
@@ -33,7 +33,7 @@ fn create_writes_json_and_markdown_packet_for_safe_artifacts() {
         ])
         .assert()
         .success()
-        .stdout(predicate::str::contains("Evidence packet written"));
+        .stdout(predicate::str::contains("Artifact manifest written"));
 
     let json_path = output.join("evidence_packet.json");
     let markdown_path = output.join("EVIDENCE_PACKET.md");
@@ -62,7 +62,7 @@ fn create_writes_json_and_markdown_packet_for_safe_artifacts() {
     assert_eq!(packet["artifacts"][0]["sha256"].as_str().unwrap().len(), 64);
 
     let markdown = fs::read_to_string(markdown_path).unwrap();
-    assert!(markdown.contains("# Evidence Packet"));
+    assert!(markdown.contains("# Artifact Manifest"));
     assert!(markdown.contains("This packet records supplied artifacts and declared boundaries."));
     assert!(markdown.contains("It does not prove that the declared claim is true."));
     assert!(markdown.contains("demo-output.txt"));
@@ -76,7 +76,7 @@ fn create_refuses_risky_private_artifacts_by_default() {
     fs::create_dir_all(&artifacts).unwrap();
     fs::write(artifacts.join(".env"), "TOKEN=secret\n").unwrap();
 
-    Command::cargo_bin("evidence-packet")
+    Command::cargo_bin("artifact-manifest")
         .unwrap()
         .args([
             "create",
@@ -103,7 +103,7 @@ fn allow_risky_records_warning_flags_instead_of_silently_accepting() {
     fs::create_dir_all(&artifacts).unwrap();
     fs::write(artifacts.join(".env"), "TOKEN=synthetic\n").unwrap();
 
-    Command::cargo_bin("evidence-packet")
+    Command::cargo_bin("artifact-manifest")
         .unwrap()
         .args([
             "create",
@@ -143,7 +143,7 @@ fn allow_risky_requires_review_note() {
     fs::create_dir_all(&artifacts).unwrap();
     fs::write(artifacts.join(".env.local"), "TOKEN=synthetic\n").unwrap();
 
-    Command::cargo_bin("evidence-packet")
+    Command::cargo_bin("artifact-manifest")
         .unwrap()
         .args([
             "create",
@@ -169,7 +169,7 @@ fn markdown_escapes_pipe_characters_in_artifact_paths() {
     fs::create_dir_all(&artifacts).unwrap();
     fs::write(artifacts.join("a|b.txt"), "sample\n").unwrap();
 
-    Command::cargo_bin("evidence-packet")
+    Command::cargo_bin("artifact-manifest")
         .unwrap()
         .args([
             "create",

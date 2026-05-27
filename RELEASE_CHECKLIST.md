@@ -1,6 +1,6 @@
 # Release Checklist
 
-This maintainer checklist is for the first public release and any material public update. It is a release gate, not a claim that Evidence Packet verifies evidence or certifies truth.
+This maintainer checklist is for the first public release and any material public update. It is a release gate, not a claim that Artifact Manifest verifies evidence or certifies truth.
 
 ## Data Boundary
 
@@ -25,7 +25,7 @@ This maintainer checklist is for the first public release and any material publi
 
 ```bash
 cargo run -- create examples/sample_artifacts \
-  --claim "The local CLI generated an evidence packet from synthetic artifacts." \
+  --claim "The local CLI generated an artifact manifest from synthetic artifacts." \
   --scope "one local demo using synthetic files" \
   --limitations "does not establish production readiness" \
   --limitations "does not verify the truth of the claim" \
