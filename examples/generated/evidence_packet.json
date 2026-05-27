@@ -1,0 +1,26 @@
+{
+  "packet_version": "0.1",
+  "created_unix_seconds": 1779921239,
+  "declared_claim": "The local CLI generated an evidence packet from synthetic artifacts.",
+  "supported_scope": "one local demo using synthetic files",
+  "limitations": [
+    "does not establish production readiness",
+    "does not verify the truth of the claim"
+  ],
+  "risk_review_note": null,
+  "boundary_note": "This packet records supplied artifacts and declared boundaries. It does not prove that the declared claim is true. It does not verify truth, and it does not certify safety, compliance, or readiness.",
+  "artifacts": [
+    {
+      "path": "demo-output.txt",
+      "size_bytes": 153,
+      "sha256": "c7b75dc4060b57c56e2579d00da4dd6a77c5637ad7303891caf45fc0e857bd30",
+      "risk_flags": []
+    },
+    {
+      "path": "evidence-notes.md",
+      "size_bytes": 240,
+      "sha256": "91a2a20644b2ec50fa78e017961e3196f87b68484b439023d92f53fa4e6a6b62",
+      "risk_flags": []
+    }
+  ]
+}

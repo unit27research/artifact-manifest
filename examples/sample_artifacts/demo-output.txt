@@ -1,0 +1,4 @@
+Synthetic demo output
+
+Claim table generated from local sample files.
+This artifact is intentionally small and does not represent production validation.

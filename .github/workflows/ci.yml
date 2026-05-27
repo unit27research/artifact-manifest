@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Check formatting
+        run: cargo fmt -- --check
+
+      - name: Run tests
+        run: cargo test
+
+      - name: Run Clippy
+        run: cargo clippy -- -D warnings
+
+      - name: Run synthetic demo
+        run: |
+          cargo run -- create examples/sample_artifacts \
+            --claim "The local CLI generated an evidence packet from synthetic artifacts." \
+            --scope "one local demo using synthetic files" \
+            --limitations "does not establish production readiness" \
+            --limitations "does not verify the truth of the claim" \
+            --output examples/generated
