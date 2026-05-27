@@ -1,6 +1,6 @@
 # Release Checklist
 
-Evidence Packet should not be pushed, posted, deployed, or publicly announced until this checklist is complete.
+This maintainer checklist is for the first public release and any material public update. It is a release gate, not a claim that Evidence Packet verifies evidence or certifies truth.
 
 ## Data Boundary
 
@@ -37,5 +37,5 @@ cargo run -- create examples/sample_artifacts \
 - [ ] GitHub Actions CI is present.
 - [ ] MIT license is present.
 - [ ] Public file scan has no private or risky material beyond boundary language.
-- [ ] Joshua explicitly approves remote repo creation and push.
+- [ ] Joshua explicitly approves first remote repo creation and push.
 - [ ] No public push, post, deploy, or announcement happens before approval.

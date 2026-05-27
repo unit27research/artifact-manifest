@@ -8,6 +8,8 @@ Evidence Packet is a small local Rust instrument for packaging evidence artifact
 
 It records what was supplied. It does not prove that the claim is true.
 
+The category is evidence-packet review: artifact does not equal proof, boundary before scale, and review before release.
+
 ## Release Status
 
 `SOURCE_STATUS: PUBLIC_PACKAGE`
@@ -111,6 +113,10 @@ Every packet includes this boundary:
 - `--allow-risky` records a review note; it does not make risky material safe.
 - The tool does not inspect artifact contents beyond hashing bytes.
 - The tool does not upload, publish, sign, notarize, or externally corroborate packets.
+
+## Reliability
+
+CI verifies formatting, unit tests, Clippy warnings, and the synthetic demo command before changes are considered ready.
 
 ## Verify
 
