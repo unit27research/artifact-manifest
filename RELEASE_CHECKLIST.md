@@ -37,5 +37,5 @@ cargo run -- create examples/sample_artifacts \
 - [ ] GitHub Actions CI is present.
 - [ ] MIT license is present.
 - [ ] Public file scan has no private or risky material beyond boundary language.
-- [ ] Joshua explicitly approves first remote repo creation and push.
+- [ ] Maintainer approval is recorded before first remote repo creation and push.
 - [ ] No public push, post, deploy, or announcement happens before approval.
